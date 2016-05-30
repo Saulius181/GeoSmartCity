@@ -1,0 +1,356 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+#mapid{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+
+}
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px;
+    border: none;
+    width: 100%;
+    background: green;
+    color: azure;
+    z-index: 1000;
+    }
+.navbar-brand{
+    font-size: 23px;
+
+}
+.active{
+    color: red;
+}
+
+.leaflet-top{
+    float:left;
+    position: relative;
+    margin-left: 20px;
+    margin-top:120px;
+    border-radius: 3px;
+
+}
+.leaflet-routing-container, .leaflet-routing-error {
+    background: transparent;
+}
+.leaflet-bar{
+    border-radius:0px;
+    box-shadow:none;
+}
+.leaflet-routing-add-waypoint{
+    display: none;
+}
+.leaflet-routing-geocoders{
+    border: none;
+    background: green;
+    padding:15px;
+    border-radius: 5px;
+
+}
+.leaflet-routing-geocoders span{
+    font-size: 25px;
+}
+.leaflet-routing-geocoder{
+    line-height: 30px;
+}
+.leaflet-routing-geocoder input{
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+.leaflet-routing-remove-waypoint::after{
+    display: none;
+}
+
+#route-information{
+    position: absolute;
+    z-index: 500;
+    top:60px;
+    left:40px;
+    background: green;
+    padding:6px;
+    border-radius: 5px;
+    width: 320px;
+    text-align: center;
+    color: azure;
+}
+#route-information > span{
+    margin: 0px 10px;
+}
+#route-information > span:hover{
+   cursor: pointer;
+    color: yellow;
+}
+#route-information > p{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+/************sweet alert***********************/
+
+.text-field{
+    height:30px;
+    width: 150px;
+    padding: 2px;
+}
+
+
+#time{
+    height:30px;
+    text-align:center;
+    font-weight:bold;
+    width:310px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+#now{
+    width:155px;
+    background: #50C347;
+    float:left;
+    height:30px;
+    padding-top:5px;
+}
+#later{
+    width:155px;
+    background: #8E8E8E;
+    float:right;
+    height:30px;
+    padding-top:5px;
+}
+#time_now{
+    display:none;
+}
+#date{
+    display: none;
+}
+.indicators{
+    width: 100%;
+    clear: both;
+}
+.indicators label{
+    float: left;
+    text-align: left;
+}
+.indicators input{
+    float: right;
+    text-align: right;
+}
+
+.sweetalert{
+    font-size: 14px;
+}
+
+.leaflet-routing-alternatives-container{
+    display: block;
+}
+
+
+/********************************Mobiel*****************/
+
+#mobile{
+    position: absolute;
+    top:250px;
+    left: 10px;
+    display: none;
+}
+#mobile:hover{
+    cursor: pointer;
+}
+
+/*-----------------------------------table route info---------------------------*/
+.popup_heading{
+    font-size: 25px;
+    color:#8176E9;
+    margin-bottom: 10px;
+    font-weight:bold;
+}
+
+#table_route_info{
+    width:100%;
+
+}
+#table_route_info th{
+    padding:5px;
+}
+
+/*-----------------------------------route found description---------------------------*/
+#route-description{
+    position: absolute;
+    top: 60px;
+    right:20px;
+    background: green;
+    padding:6px;
+    border-radius: 5px;
+    width: 320px;
+    text-align: center;
+    color: azure;
+    display: none;
+
+}
+
+
+#route-description p{
+    font-size: 17px;
+    font-weight: 600;
+}
+#route-description a{
+     text-decoration: none;
+     color: azure;
+     margin: 0px 5px;
+ }
+#route-description a:hover{
+    color: yellow;
+}
+
+#route-description > span{
+    margin: 0px 10px;
+}
+#route-description > span:hover{
+    cursor: pointer;
+    color: yellow;
+}
+#cancel{
+    display: none;
+}
+
+/*-----------------------------------route list---------------------------*/
+
+
+.pref {
+    display: none;
+
+}
+/*********************rotues table**************************/
+
+
+.route-desktop{
+        position: absolute;
+        z-index: 1000;
+        right:20px;
+        margin-left: 20px;
+        top:150px;
+        text-align: center;
+        max-width: 800px;
+		display: none;
+
+}
+.route-desktop table{
+    width:auto;
+    margin-bottom: 15px;
+}
+
+.route-desktop th{
+    background: indianred;
+    padding: 10px;
+    border-radius: 8px 8px 0px 0px;
+    font-size: 16px;
+    color:azure;
+}
+.route-desktop table td{
+    background: whitesmoke;
+    width: 800px;
+    padding: 15px 0px;
+    font-size: 17px;
+}
+
+
+
+@media screen and (max-width: 640px) {
+        .leaflet-top{
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+        border-radius: 0px;
+    }
+    .pref{
+        display: inline-block;
+    }
+    #route-information{
+        display:none;
+        top:150px;
+        left:40px;
+
+
+    }
+    #mobile{
+        display: inline-block;
+        top:150px;
+        left: 10px;
+    }
+    .navbar-brand{
+        font-size: 20px;
+     }
+
+
+
+    #route-description{
+        bottom: 0px;
+        top: auto;
+        width: 100%;
+        right: 0px;
+        height: auto;
+        border-radius: 0px;
+        z-index: 2000;
+        position: fixed;
+    }
+    #route-description p{
+        display:none;
+    }
+    .navbar-header{
+        font-size: 6px;
+    }
+    #route-information{
+
+        top:150px;
+        left:0px;
+        width: 100%;
+
+
+    }
+    #cancel{
+        position: absolute;
+        top:-5px;
+        z-index: 1500;
+        right:0px;
+        padding:2px;
+        color:orangered;
+        font-weight: 800;
+        font-size: 20px;
+        display: inline-block;
+    }
+
+
+}
+@media  screen and  (max-width:992px){
+    #route-description{
+        bottom: 0px;
+        top: auto;
+        width: 100%;
+        right: 0px;
+        height: auto;
+        border-radius: 0px;
+        z-index: 2000;
+        position: fixed;
+    }
+
+}
+
+@media  screen and  (min-width:1200px){
+
+    .route-desktop{
+        position: absolute;
+        z-index: 1000;
+        right:20px;
+        margin-left: 20px;
+        top:150px;
+        text-align: center;
+        max-width: 800px;
+
+    }
+
+}

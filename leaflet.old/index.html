@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Routing</title>
+
+    <!--include the leaflet libraries-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <!--
+   <script src="JS/leaflet-routing-machine.js"></script>
+   <link rel="stylesheet" href="CSS/leaflet-routing-machine.css">-->
+
+
+    <!--include the nominating libraries-->
+    <script src="routing-machine/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="routing-machine/leaflet-routing-machine.css">
+
+   <!--inlcude the geocoders libraries-.-->
+    <script src="JS/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="CSS/Control.Geocoder.css">
+
+
+    <!--include the custom css/js files-->
+    <script src="JS/script.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+
+
+    <!--include bootstrap sweetalert-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+
+    <!--sweet alert-->
+    <link rel="stylesheet" href="CSS/sweetalert2.css">
+    <script src="JS/sweetalert2.min.js"></script>
+    <script src="JS/popup.js"></script>
+
+    <!--Json file-->
+    <script src="Json/geojson.js"></script>
+    <script src="Json/ParkingData.js"></script>
+    <script src="Json/parkentry.js"></script>
+    <script src="Json/parkexit.js"></script>
+
+
+
+    <!--mobile support-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+</head>
+<body>
+<div id="map">
+
+    <div id="content">
+	
+
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-12 button-left">
+
+
+                    <button class="btn btn-primary" onclick="time()">
+                        <span class="glyphicon glyphicon-time" ></span>
+                        Time
+                    </button>
+                    <button class="btn btn-primary button-left-button1" onclick="preference()" >
+                        <span class="glyphicon glyphicon-cog "></span>
+                        Preference
+                    </button>
+                    <button class="btn btn-primary buttons" onclick="info()">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        About
+                    </button>
+                </div>
+
+
+                <div class="col-md-7 logo-right">
+                    <!--empty div holder-->
+
+                </div>
+
+            </div>
+
+            <!--view route-->
+            <div class="row">
+
+                <div class="col-md-12 button-right" id="view_route">
+                    <button class="btn btn-danger" onclick="viewroute()">
+                    <span class="glyphicon glyphicon-list-alt"> </span>
+                       Route Info
+                    </button>
+                </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+
